@@ -1,6 +1,6 @@
 /* Avazbek */
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 * {
     padding: 0;
     margin: 0;
@@ -319,4 +319,47 @@ button{
 .widtImg{
     width: 30px;
 }
+
+/* Umumiy dizayn */
+.infoDesk {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.cardContainer {
+    display: flex;
+    width: 1060px; /* 3 ta kartaning kengligi */
+    overflow: hidden; /* Kartochkalarning ortiqcha qismini yashirish */
+    gap: 16px;
+}
+
+.card h1{
+    color: #3877EE;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.card p{
+    font-family: "PT Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.card {
+    
+    /* padding: 16px; */
+    width: 720px;
+    height: 135px;
+    text-align: center ;
+    
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.extraControlBtn {
+    margin-left: 16px;
+}
+
 /* mobi css */
