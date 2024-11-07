@@ -179,8 +179,8 @@
     display: flex;
     justify-content: space-between;
     margin-top: -10px;
-    margin-left: -3px;
-    width:  540px;
+    margin-left: -1px;
+    width:  537px;
 }
 
 /* Pastdagi nuqtalar */
@@ -189,7 +189,7 @@
     justify-content: space-around;
     align-items: center;
     height: 40px;
-    margin-top: 200px;
+    margin-top: 220px;
 }
 
 /* Nuqtalar */
@@ -280,4 +280,43 @@
     justify-content: center;
 }
 
+.controlPanel{
+    width: 120px;
+    height: 88px;
+    margin-left: 40px;
+}
+
+.controlId{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-left: 15px;
+}
+
+.controlId label{
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #42567A;
+}
+
+.controlBtns{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: solid 1px #42567A;
+    background-color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.widtImg{
+    width: 30px;
+}
 /* mobi css */
