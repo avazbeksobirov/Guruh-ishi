@@ -118,15 +118,17 @@
 
 /* Markazlash */
 .center {
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100vh; /* Ekran bo'yicha markazlash uchun */
+    height: 50vh; /* Ekran bo'yicha markazlash uchun */
 }
 
 /* Asosiy aylana */
 .circle {
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -145,9 +147,9 @@
 
 /* Nuqtalar uchun konteyner */
 .tortburchakNuctalarUchun {
-    position: absolute;
+    /* position: absolute; */
     width: 536px;
-    height: 464px;
+    height: 484px;
 }
 
 /* Eng yuqoridagi nuqtalar */
@@ -177,12 +179,16 @@
     display: flex;
     justify-content: space-between;
     margin-top: -10px;
+    margin-left: -3px;
+    width:  540px;
 }
 
 /* Pastdagi nuqtalar */
 .tortga {
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    height: 40px;
     margin-top: 200px;
 }
 
@@ -243,6 +249,35 @@
     height: 50px;
     border-radius: 50%;
     border: solid 1px #333  ;
+}
+
+.years{
+    height: 160px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
+}
+
+.blueYear,
+.redYear{
+    font-size: 200px;
+    font-weight: 700;
+}
+.blueYear{
+    color: #3877EE;
+}
+.redYear{
+    color: #EF5DA8;
+}
+.center-years{
+    height:380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* mobi css */
