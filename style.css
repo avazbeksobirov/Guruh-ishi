@@ -325,38 +325,53 @@ button{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 40vh;
+    width: 100%;
 }
 
 .cardContainer {
+    max-height: 250px; /* Increased height for larger cards */
     display: flex;
-    width: 1060px; /* 3 ta kartaning kengligi */
-    overflow: hidden; /* Kartochkalarning ortiqcha qismini yashirish */
+    width: 60vw; /* Full viewport width */
+    overflow-x: auto; /* Enable horizontal scrolling */
     gap: 16px;
+    scroll-behavior: smooth; /* Smooth scroll effect */
 }
 
-.card h1{
-    color: #3877EE;
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 25px;
-    font-weight: 400;
+.cardContainer::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Webkit browsers */
 }
 
-.card p{
-    font-family: "PT Sans", sans-serif;
-    font-size: 20px;
-    font-weight: 400;
+.cardContainer {
+    -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
 }
 
 .card {
-    
-    /* padding: 16px; */
-    width: 720px;
-    height: 135px;
-    text-align: center ;
-    
+    flex: 1 1 33.33%; /* Each card takes up a third of the screen */
+    max-width: calc(33.33% - 16px); /* Three cards across with gap */
+    padding: 16px;
+    text-align: left; /* Align text to the left for readability */
     transition: transform 0.5s ease, opacity 0.5s ease;
+    cursor: pointer;
 }
+
+.card h1 {
+    color: #3877EE;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.card p {
+    font-family: "PT Sans", sans-serif;
+    font-size: 18px; /* Slightly smaller to fit more text */
+    font-weight: 400;
+    line-height: 1.5; /* Increase line height for readability */
+    max-width: 100%; /* Allow paragraph to use full width of card */
+}
+
 
 .extraControlBtn {
     margin-left: 16px;
