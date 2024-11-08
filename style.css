@@ -368,8 +368,9 @@ button{
     font-family: "PT Sans", sans-serif;
     font-size: 18px; /* Slightly smaller to fit more text */
     font-weight: 400;
-    line-height: 1.5; /* Increase line height for readability */
-    max-width: 100%; /* Allow paragraph to use full width of card */
+    width: 300px;
+    /* line-height: 1.5; Increase line height for readability */
+    /* max-width: 100%; Allow paragraph to use full width of card */
 }
 
 
