@@ -537,6 +537,10 @@ button{
     margin-left: 16px;
 }
 
+#nextButton img,
+#backButton img{
+    width: 20px;
+}
 
 
 /* mobi css */
