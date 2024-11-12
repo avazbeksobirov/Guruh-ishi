@@ -117,42 +117,47 @@
 
 
 /* Markazlash */
-.center {
+/* .center {
     position: absolute;
+    z-index: 1;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 50vh; /* Ekran bo'yicha markazlash uchun */
+    height: 50vh; 
+    background: transparent;
 }
 
-/* Asosiy aylana */
+
 .circle {
-    position: absolute;
+    position: relative;
+
     display: flex;
     align-items: center;
     justify-content: center;
     width: 536px;
     height: 530px;
-    position: relative;
+    
+    background:transparent;
+
 }
 
-/* Dumaloq chegarasi */
+
 .dumaloq {
+    background: transparent;
+    z-index: -1;
     border-radius: 50%;
     width: 100%;
     height: 100%;
     border: solid 1px #3877EE;
 }
 
-/* Nuqtalar uchun konteyner */
 .tortburchakNuctalarUchun {
-    /* position: absolute; */
     width: 536px;
     height: 484px;
+    background: transparent;
 }
 
-/* Eng yuqoridagi nuqtalar */
 .ikkiga {
     display: flex;
     justify-content: space-around;
@@ -160,21 +165,21 @@
     margin-bottom: 160px;
 }
 
-/* Markazdagi raqam va sarlavha */
 .circleNumber {
     font-size: 24px;
     font-weight: bold;
     color: #333;
+    
 }
 
 .circleNumberTitle {
     font-size: 14px;
     color: #555;
+    background:transparent;
+
     
-    /* margin-top: 5px; */
 }
 
-/* Chap tomondagi nuqtalar */
 .uchga {
     display: flex;
     justify-content: space-between;
@@ -183,37 +188,45 @@
     width:  537px;
 }
 
-/* Pastdagi nuqtalar */
 .tortga {
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 40px;
+    background:transparent;
     margin-top: 220px;
 }
 
-/* Nuqtalar */
 .dot1, .dot2, .dot3, .dot4, .dot5 {
     width: 6px;
     height: 6px;
-    background-color: #000; /* Black color */
+    background-color: #000; 
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%; /* Round shape */
+    border-radius: 50%; 
     text-align: center;
-    color: transparent; /* Hide any text */
+    color: transparent; 
+    transition: ease-in-out .8ms;
+
 }
 
 
-/* .dot1::before, .dot2::before, .dot3::before, .dot4::before, .dot5::before {
-    content: "";
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    background-color: #888;
+
+.hover_dot:hover {
+    color: #000;
+    background-color: #FFF;
+    cursor: context-menu;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-} */
+    border: solid 1px #333  ;
+    background: white;
+    margin-left: -20px;
+    margin-top: -15px;
+   
+}
+
 
 
 .dot5 {
@@ -226,14 +239,17 @@
 
 .dot4 {
     margin-right: -8px;
+    position: relative;
 }
+    */
+    
 
-/* Markazdagi asosiy nuqta */
 .divLonly {
     display: flex;
     margin-top: -15px;
    justify-content: center;
-    /* align-items: center; */
+
+
     gap: 5px;
     padding-left:   50px;
     
@@ -244,28 +260,171 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
     width: 50px;
     height: 50px;
     border-radius: 50%;
     border: solid 1px #333  ;
+    background: white;
+    
+} 
+
+
+.center {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50vh;
+    background: transparent;
 }
+
+/* Main circle */
+.circle {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 536px;
+    height: 530px;
+    background: transparent;
+}
+
+/* Circular border */
+.dumaloq {
+    background: transparent;
+    z-index: -1;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    border: solid 1px #3877EE;
+}
+
+/* Container for dots */
+.tortburchakNuctalarUchun {
+    width: 536px;
+    height: 484px;
+    background: transparent;
+}
+
+/* Top section with dots */
+.ikkiga {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 160px;
+}
+
+/* Center number and title */
+.circleNumber {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.circleNumberTitle {
+    font-size: 14px;
+    color: #555;
+    background: transparent;
+}
+
+/* Left section with dots */
+.uchga {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -25px;
+    margin-left: -1px;
+    width: 537px;
+}
+
+/* Bottom section with dots */
+.tortga {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 40px;
+    background: transparent;
+    margin-top: 235px;
+}
+
+/* Dots */
+.dot1, .dot2, .dot3, .dot4, .dot5 {
+    width: 6px;
+    font-size: 10px;
+    height: 6px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    text-align: center;
+    color: transparent;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect using scale for enlargement without shifting */
+.hover_dot:hover {
+    font-size: 10px;
+    color: #000;
+    background-color: #FFF;
+    cursor: pointer;
+    padding: 10px;
+    transform: scale(2.33); /* Enlarge to 50px (6px * 8.33) */
+    border: solid 1px #333;
+    background: white;
+}
+
+/* Adjust positions of specific dots */
+.dot5 {
+    margin-left: 65px;
+  
+}
+
+.dot1 {
+    margin-left: -20px;
+}
+
+.dot4 {
+    margin-right: -8px;
+    position: relative;
+}
+
+
+.dot4:hover,
+.dot1:hover{
+    margin-top: -15px;
+}
+
+
+
+
+
+
 
 .years{
     height: 160px;
     text-align: center;
-    position: relative;
-    z-index: 1;
+    /* position: relative; */
+    /* z-index: -1; */
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 70px;
+    background: transparent;
+    position: absolute;
+    height: 200px;
+   
 }
 
 .blueYear,
 .redYear{
     font-size: 200px;
     font-weight: 700;
+    background: transparent;
+}
+.blueYear h1{
+    background: transparent;
 }
 .blueYear{
     color: #3877EE;
@@ -377,5 +536,7 @@ button{
 .extraControlBtn {
     margin-left: 16px;
 }
+
+
 
 /* mobi css */
